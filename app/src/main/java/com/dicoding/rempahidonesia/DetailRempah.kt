@@ -21,8 +21,7 @@ class DetailRempah : AppCompatActivity() {
         val tvDetailDescription = findViewById<TextView>(R.id.tv_detail_description)
         val tvDetailPhoto = findViewById<ImageView>(R.id.img_detail_photo)
 
-        tvDetailName.text = dataRempah?.tv_detail_name
-        tvDetailDescription.text = dataRempah?.tv_detail_description
-        tvDetailPhoto.setImageResource(dataRempah?.img_detail_photo!!)
+        tvDetailName.text = dataRempah?.name
+        tvDetailDescription.text = dataRempah?.description
+        dataRempah?.photo?.let { tvDetailPhoto.setImageResource(it) }
     } }
-
