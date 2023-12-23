@@ -8,8 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.rempahindonesia.R
 
 class DetailRempah : AppCompatActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_rempah)
@@ -23,8 +21,8 @@ class DetailRempah : AppCompatActivity() {
         val tvDetailDescription = findViewById<TextView>(R.id.tv_detail_description)
         val tvDetailPhoto = findViewById<ImageView>(R.id.img_detail_photo)
 
-        tvDetailName.text = dataRempah?.name
-        tvDetailDescription.text = dataRempah?.description
-        tvDetailPhoto.setImageResource(dataRempah?.photo!!)
-
+        tvDetailName.text = dataRempah?.tv_detail_name
+        tvDetailDescription.text = dataRempah?.tv_detail_description
+        tvDetailPhoto.setImageResource(dataRempah?.img_detail_photo!!)
     } }
+

@@ -1,38 +1,16 @@
 package com.dicoding.rempahidonesia
 
-import android.os.Parcel
 import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 
+@Parcelize
 data class Rempah(
     val name: String?,
     val description: String?,
-    val photo: Int
-) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readInt()
-    ) {
-    }
+    val photo: Int,
+    val tv_detail_name: String?,
+    val tv_detail_description: String?,
+    val img_detail_photo: Int,
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(name)
-        parcel.writeString(description)
-        parcel.writeInt(photo)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<Rempah> {
-        override fun createFromParcel(parcel: Parcel): Rempah {
-            return Rempah(parcel)
-        }
-
-        override fun newArray(size: Int): Array<Rempah?> {
-            return arrayOfNulls(size)
-        }
-    }
-}
+) : Parcelable { }

@@ -2,7 +2,6 @@
     <string name="app_name">Rempah Indonesia</string>
     <string name="rempahs_name">Rempah Indonesia</string>
     <string name="description">Deskripsi</string>
-    <string name="list">About Me</string>
 
     <integer-array name="data_photo">
         <item>@drawable/bawang_bombai</item>
@@ -98,4 +97,5 @@ Biji pala mengandung minyak atsiri 7-14%. Bubuk pala dipakai sebagai penyedap un
         <item>@drawable/lengkuas</item>
         <item>@drawable/pala</item>
     </integer-array>
+
 </resources>

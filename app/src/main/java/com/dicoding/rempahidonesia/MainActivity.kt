@@ -1,18 +1,15 @@
 package com.dicoding.rempahidonesia
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.rempahindonesia.R
 
 class MainActivity : AppCompatActivity() {
-
     private val list = ArrayList<Rempah> ()
     private lateinit var rvRempahs: RecyclerView
     private fun showSelectedRempah(rempah: Rempah) {
@@ -27,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         list.addAll(getListRempahs())
         showRecyclerList()
     }
+
         private fun getListRempahs(): ArrayList<Rempah> {
             val dataName = resources.getStringArray(R.array.data_name)
             val dataDescription = resources.getStringArray(R.array.data_description)
@@ -39,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             return listRempah
         }
 
-        private fun showRecyclerList() {
+       private fun showRecyclerList() {
             rvRempahs.layoutManager = LinearLayoutManager(this)
             val listRempahAdapter = ListRempahAdapter(list)
             rvRempahs.adapter = listRempahAdapter
@@ -60,7 +58,6 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.action_list -> {
                 rvRempahs.layoutManager = LinearLayoutManager(this)
-            }
-        }
+            }   }
         return super.onOptionsItemSelected(item)
-    } }
+    }    }
